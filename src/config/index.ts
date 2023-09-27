@@ -7,8 +7,10 @@ dotenv.config({ path: envPath });
 
 const config = {
   env: process.env.NODE_ENV,
+  ip: process.env.IP || '127.0.0.1',
   port: process.env.PORT || 4000,
   database_url: process.env.DATABASE_URL,
+  session_secret: process.env.SESSION_SECRET,
   default_student_pass: process.env.DEFAULT_STUDENT_PASS,
   default_faculty_pass: process.env.DEFAULT_FACULTY_PASS,
   default_admin_pass: process.env.DEFAULT_ADMIN_PASS,

@@ -17,6 +17,7 @@ const errorHandler: ErrorRequestHandler = (error, _req, res, next) => {
   const isZodError = error instanceof ZodError;
   const isApiError = error instanceof ApiError;
   const isSyntaxOrTypeError = error instanceof SyntaxError || error instanceof TypeError;
+  const isForbiddenError = error.code === 'EBADCSRFTOKEN';
 
   if (isDevelopment) {
     console.error('Error:', error);
@@ -55,6 +56,17 @@ const errorHandler: ErrorRequestHandler = (error, _req, res, next) => {
           {
             path: '',
             message: error.message,
+          },
+        ]
+      : [];
+  } else if (isForbiddenError) {
+    response.statusCode = error.statusCode;
+    response.message = 'Invalid csrf token';
+    response.errorMessages = error.message
+      ? [
+          {
+            path: '',
+            message: 'Invalid csrf token',
           },
         ]
       : [];

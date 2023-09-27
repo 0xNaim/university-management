@@ -45,34 +45,34 @@ To run this project, you need to have the following dependencies installed on yo
 
 2. **Navigate to the project directory:**
 
-    ```bash
-    cd university-management
-    ```
+   ```bash
+   cd university-management
+   ```
 
 3. **Install Node.js dependencies:**
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 4. **Configure Environment Variables:**
 
-    - Create a `.env` file in the root directory.
-    - Define environment variables such as database connection URL, Node Environment, default Student password, Bcrypt salt rounds etc.
+   - Create a `.env` file in the root directory.
+   - Define environment variables such as database connection URL, Node Environment, default Student password, Bcrypt salt rounds etc.
 
-    Note: Check `.env.example` file for all required environments.
+   Note: Check `.env.example` file for all required environments.
 
 ## Usage
 
 1. **Run the Application:**
 
-    ```bash
-    npm start
-    ```
+   ```bash
+   npm start
+   ```
 
 2. **Access the Application:**
 
-    Open your web browser and visit http://localhost:4000 to access the University Management System.
+   Open your web browser and visit http://localhost:4000 to access the University Management System.
 
 ## Resources
 
