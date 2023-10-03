@@ -7,9 +7,9 @@ import { testDBHandler } from '../../utils/test-utils/dbHandler.utils';
 describe('Academic Semester Controller', () => {
   const agent: SuperTest<Test> = supertest(app);
 
-  beforeAll(async () => testDBHandler.connect);
-  beforeEach(async () => testDBHandler.clearData);
-  afterAll(async () => testDBHandler.disconnect);
+  beforeAll(async () => await testDBHandler.connect());
+  beforeEach(async () => await testDBHandler.clearData());
+  afterAll(async () => await testDBHandler.disconnect());
 
   it('should create a semester', async () => {
     const newSemester = {
