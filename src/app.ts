@@ -37,7 +37,7 @@ app.use(
 
 // Initialize csrf middleware
 const csrfProtection = csrf({ cookie: true });
-app.use(csrfProtection);
+// app.use(csrfProtection);
 
 // Cors
 app.use(cors());
