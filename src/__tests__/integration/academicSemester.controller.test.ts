@@ -55,7 +55,7 @@ describe('Academic Semester Controller', () => {
   });
 
   it('should get all semesters', async () => {
-    const response = await agent.get('/api/v1/academic-semesters');
+    const response = await agent.get('/api/v1/academic-semesters').query({ page: 1, limit: 10 });
 
     const { data: responseBody } = JSON.parse(response.text);
 
